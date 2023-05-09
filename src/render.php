@@ -8,15 +8,14 @@
  *
  * @package wpdev
  */
-
 ?>
 
 <div <?php echo get_block_wrapper_attributes(); ?> tabindex="0">
 	<?php
-	if ( $attributes['foregroundImage'] ) {
+	if ( isset( $attributes['foregroundImage'] ) && $attributes['foregroundImage'] ) {
 		echo wp_get_attachment_image( $attributes['foregroundImage'], 'full' );
 	}
-	if ( $attributes['backgroundImage'] ) {
+	if ( isset( $attributes['backgroundImage'] ) && $attributes['backgroundImage'] ) {
 		echo wp_get_attachment_image( $attributes['backgroundImage'], 'full' );
 	}
 	?>
