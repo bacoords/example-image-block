@@ -8393,36 +8393,36 @@ function Edit(props) {
     setAttributes
   } = props;
   const {
-    imageOne,
-    imageTwo
+    foregroundImage,
+    backgroundImage
   } = attributes;
-  const handleImageSelect = image => {
+  const handleForegroundImageSelect = image => {
     setAttributes({
-      imageOne: image.id
+      foregroundImage: image.id
     });
   };
-  const handleImageTwoSelect = image => {
+  const handleBackgroundImageSelect = image => {
     setAttributes({
-      imageTwo: image.id
+      backgroundImage: image.id
     });
   };
-  const handleImageRemove = () => {
+  const handleForegroundImageRemove = () => {
     setAttributes({
-      imageOne: null
+      foregroundImage: null
     });
   };
-  const handleImageTwoRemove = () => {
+  const handleBackgroundImageRemove = () => {
     setAttributes({
-      imageTwo: null
+      backgroundImage: null
     });
   };
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Panel, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
     title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Background Image Settings', 'double-image')
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_10up_block_components__WEBPACK_IMPORTED_MODULE_4__.Image, {
-    id: imageTwo,
+    id: backgroundImage,
     className: "my-image",
     size: "full",
-    onSelect: handleImageTwoSelect,
+    onSelect: handleBackgroundImageSelect,
     labels: {
       title: 'Select Background Image',
       instructions: 'Upload a media file or pick one from your media library.'
@@ -8430,23 +8430,23 @@ function Edit(props) {
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
     isDestructive: true,
     variant: "link",
-    onClick: handleImageTwoRemove
+    onClick: handleBackgroundImageRemove
   }, "Remove Background Image"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_10up_block_components__WEBPACK_IMPORTED_MODULE_4__.MediaToolbar, {
     isOptional: true,
-    id: imageOne,
-    onSelect: handleImageSelect,
-    onRemove: handleImageRemove
+    id: foregroundImage,
+    onSelect: handleForegroundImageSelect,
+    onRemove: handleForegroundImageRemove
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_10up_block_components__WEBPACK_IMPORTED_MODULE_4__.Image, {
-    id: imageOne,
+    id: foregroundImage,
     className: "my-image",
     size: "full",
-    onSelect: handleImageSelect,
+    onSelect: handleForegroundImageSelect,
     labels: {
       title: 'Select Foreground Image',
       instructions: 'Upload a media file or pick one from your media library.'
     }
-  }), imageTwo && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_AttachmentImage__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    imageId: imageTwo
+  }), backgroundImage && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_AttachmentImage__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    imageId: backgroundImage
   }));
 }
 
@@ -13930,7 +13930,7 @@ function combine (array, callback) {
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"wpdev/double-image","version":"0.1.0","title":"Double Image","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","supports":{"html":false},"attributes":{"imageOne":{"type":"integer"},"imageTwo":{"type":"integer"}},"textdomain":"double-image","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"wpdev/double-image","version":"0.1.0","title":"Double Image","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","supports":{"html":false},"attributes":{"foregroundImage":{"type":"integer"},"backgroundImage":{"type":"integer"}},"textdomain":"double-image","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ })
 

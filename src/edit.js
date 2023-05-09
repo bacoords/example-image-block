@@ -35,28 +35,28 @@ import AttachmentImage from './AttachmentImage';
  */
 export default function Edit(props) {
 	const { attributes, setAttributes } = props;
-	const { imageOne, imageTwo } = attributes;
+	const { foregroundImage, backgroundImage } = attributes;
 
-	const handleImageSelect = (image) => {
+	const handleForegroundImageSelect = (image) => {
 		setAttributes({
-			imageOne: image.id,
+			foregroundImage: image.id,
 		});
 	};
 
-	const handleImageTwoSelect = (image) => {
+	const handleBackgroundImageSelect = (image) => {
 		setAttributes({
-			imageTwo: image.id,
+			backgroundImage: image.id,
 		});
 	};
 
-	const handleImageRemove = () => {
+	const handleForegroundImageRemove = () => {
 		setAttributes({
-			imageOne: null,
+			foregroundImage: null,
 		});
 	};
-	const handleImageTwoRemove = () => {
+	const handleBackgroundImageRemove = () => {
 		setAttributes({
-			imageTwo: null,
+			backgroundImage: null,
 		});
 	};
 
@@ -70,10 +70,10 @@ export default function Edit(props) {
 						<PanelRow>
 
 							<Image
-								id={imageTwo}
+								id={backgroundImage}
 								className="my-image"
 								size="full"
-								onSelect={handleImageTwoSelect}
+								onSelect={handleBackgroundImageSelect}
 								labels={{
 									title: 'Select Background Image',
 									instructions: 'Upload a media file or pick one from your media library.'
@@ -82,7 +82,7 @@ export default function Edit(props) {
 
 						</PanelRow>
 						<PanelRow>
-							<Button isDestructive variant="link" onClick={handleImageTwoRemove}>Remove Background Image</Button>
+							<Button isDestructive variant="link" onClick={handleBackgroundImageRemove}>Remove Background Image</Button>
 						</PanelRow>
 					</PanelBody>
 				</Panel>
@@ -91,22 +91,22 @@ export default function Edit(props) {
             <BlockControls>
                 <MediaToolbar
                     isOptional
-                    id={ imageOne }
-                    onSelect={ handleImageSelect }
-                    onRemove={ handleImageRemove }
+                    id={ foregroundImage }
+                    onSelect={ handleForegroundImageSelect }
+                    onRemove={ handleForegroundImageRemove }
                 />
             </BlockControls>
 			<Image
-				id={imageOne}
+				id={foregroundImage}
 				className="my-image"
 				size="full"
-				onSelect={handleImageSelect}
+				onSelect={handleForegroundImageSelect}
 				labels={{
 					title: 'Select Foreground Image',
 					instructions: 'Upload a media file or pick one from your media library.'
 				}}
 			/>
-			{ imageTwo && (<AttachmentImage imageId={imageTwo}  />) }
+			{ backgroundImage && (<AttachmentImage imageId={backgroundImage}  />) }
 		</div>
 	);
 }

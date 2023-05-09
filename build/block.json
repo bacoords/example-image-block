@@ -11,10 +11,10 @@
     "html": false
   },
   "attributes": {
-    "imageOne": {
+    "foregroundImage": {
       "type": "integer"
     },
-    "imageTwo": {
+    "backgroundImage": {
       "type": "integer"
     }
   },
