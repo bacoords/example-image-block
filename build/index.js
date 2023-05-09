@@ -13930,7 +13930,7 @@ function combine (array, callback) {
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"wpdev/double-image","version":"0.1.0","title":"Double Image","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","supports":{"html":false},"attributes":{"foregroundImage":{"type":"integer"},"backgroundImage":{"type":"integer"}},"textdomain":"double-image","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"wpdev/double-image","version":"0.1.0","title":"Double Image","category":"widgets","icon":"format-image","description":"Example block scaffolded with Create Block tool.","supports":{"html":false},"attributes":{"foregroundImage":{"type":"integer"},"backgroundImage":{"type":"integer"}},"textdomain":"double-image","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ })
 

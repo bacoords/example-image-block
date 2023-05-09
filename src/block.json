@@ -5,7 +5,7 @@
 	"version": "0.1.0",
 	"title": "Double Image",
 	"category": "widgets",
-	"icon": "smiley",
+	"icon": "format-image",
 	"description": "Example block scaffolded with Create Block tool.",
 	"supports": {
 		"html": false
